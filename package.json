@@ -1,0 +1,23 @@
+{
+  "name": "pimientasaldh",
+  "version": "1.0.0",
+  "description": "proyecto-js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solzambrano/pimientaSalDH.git"
+  },
+  "author": "soledadzambrano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solzambrano/pimientaSalDH/issues"
+  },
+  "homepage": "https://github.com/solzambrano/pimientaSalDH#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.19.2"
+  }
+}
