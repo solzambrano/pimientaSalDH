@@ -59,7 +59,7 @@
           <h1 class="ps-center">Nuentro Menu</h1>
           <% for (let menu of menuComida) {%>
           <h4><%= menu.nombre %></h4>
-           <img src="<%=menu.image %>"/>
+            <a href="/detail/<%= menu.id %>"><img src="<%=menu.image %>"/></a>
           <p class="ps-text-grey">
             <%= menu.descrpcion%> 
           </p>

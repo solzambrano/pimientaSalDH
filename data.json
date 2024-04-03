@@ -1,11 +1,13 @@
 [
     {
+        "id":1,
         "image":"/images/Carpaccio-de-salmon.jpg",
         "descripcion":"Entrada Carpaccio de salmón con cítricos",
         "nombre":"Carpaccio fresco",
         "precio":"U$S  65.50"
     },
     {
+        "id":2,
         "image":"/images/Risotto-berenjena-queso-cabra.jpg",
         "descripcion":"Risotto de berenjena y queso de cabra",
         "nombre":"Risotto de berenjena y queso de cabra",
@@ -13,12 +15,14 @@
 
     },
     {
+        "id":3,
         "image":"/images/Mousse-de-arroz-con-leche.jpg",
         "descripcion":"Mousse de arroz con leche y aroma de azahar",
         "nombre":"Mousse de arroz con leche y aroma de azahar",
         "precio":"U$S  27.50"
     },
     {
+        "id":4,
         "image":"/images/esparragos.png",
         "descripcion":"Espárragos blancos con vinagreta de verduras y jamón ibérico",
         "nombre":"Esparragos blancos",
