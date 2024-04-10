@@ -1,0 +1,2 @@
+El proyecto inicialmente contaba con html y css,se le agrego la estructura de carpetas correspondientes para representar la arquitectura mvc, se modifico el css original, para una mejor representacion.
+Utilizando ejs como motor de plantillas se cambiaron los .html por.ejs
