@@ -2,6 +2,7 @@ const express=require('express');
 const app=express();
 const index=require('./routes/indexRoutes');
 const detail=require('./routes/detail');
+const about=require('./routes/about')
 
 const port=process.env.PORT || 3000
 app.use(express.static('./public'))
@@ -14,3 +15,5 @@ app.listen(port,()=>{
 })
 app.use('/',index)
 app.use('/',detail)
+app.use('/',about)
+

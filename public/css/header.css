@@ -1,4 +1,11 @@
-img{
-    width: 50%;
+.imageHeader{
+    width: 100%;
   height: 50%;
+  opacity: 0.5;
+  position: relative;
+}
+.tittleHeader{
+  font-size: 25px;
+  color:black;
+    position: absolute;
 }
