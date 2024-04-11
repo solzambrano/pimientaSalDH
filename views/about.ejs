@@ -6,13 +6,12 @@
     <title>Pimienta y sal</title>
 </head>
 <body>
-        <%- include('./partials/nav')%>
-   
-
+    <%- include('./partials/nav')%>  
     <!-- Header -->
     <%- include('./partials/header')%>
 
-    <div class="" id="about">
+    <section id="about">
+        <h1 class="">Pimienta & Sal</h1>
         <div class="">
           <img
             src="/images/principal.jpg"
@@ -21,9 +20,7 @@
           />
         </div>
 
-        <div class="">
-          <h1 class="">Pimienta & Sal</h1>
-          <br />
+        <article class="">
           <p class="">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur
             adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -40,7 +37,9 @@
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
             laboris nisi ut aliquip ex ea commodo consequat.
           </p>
-        </div>
-      </div>
+        </article>
+      </section>
+      <%-include('./partials/footer')%>
+
 </body>
 </html>

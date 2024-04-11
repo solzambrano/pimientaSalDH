@@ -9,7 +9,6 @@ a{
     color:black
 }
 
-.menu{
-    display: flex;
-    justify-content: space-around;
+.menu a {
+  margin-left: 20px; /* Agrega un espacio entre los elementos */
 }
