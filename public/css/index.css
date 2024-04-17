@@ -1,7 +1,5 @@
-.menuContent{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+html{
+    box-sizing: border-box;
 }
 h4{
     font-size:20px
@@ -14,4 +12,37 @@ h1{
 }
 img{
     width: 100%;
+}
+/*media query*/
+@media (min-width: 780px) {
+ 
+    .menuContent{
+        flex-wrap: wrap;
+        display: flex;
+    }
+    .container-picture{
+        width: 25%;
+        margin: 10px 0px;
+
+    }
+    .card{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #title-menu{
+        width: 25%;
+    }
+}
+@media (min-width: 1024px) {
+    .card{
+        width: 45vw;
+    align-items: flex-start;
+    justify-content: space-around; 
+    margin:20px;
+    }
+    #menu{
+        margin-top: 30px;
+    }
 }

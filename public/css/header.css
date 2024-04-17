@@ -9,3 +9,21 @@
   color:black;
     position: absolute;
 }
+
+/*media query*/
+@media (min-width: 768px) {
+  .tittleHeader{
+    position: relative;
+    font-size:35px;
+    top:65px;
+  }
+  .tittle{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+.imageHeader{
+    width: 50%;
+}
+}

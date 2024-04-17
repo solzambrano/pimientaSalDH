@@ -15,23 +15,23 @@
     <%- include('./partials/header')%>
 
     <!-- Page content -->
-    <div class="ps-content">
       <!-- Menu Section -->
-      <div class="" id="menu">
-          <h1 class="">Nuentro Menu</h1>
-        <div class="menu-content">
+      <section class="" id="menu">
+          <h1 class="">Nuestro Menu</h1>
+        <article class="menuContent">
           <% for (let menu of menuComida) {%>
-          <h4><%= menu.nombre %></h4>
+          <article class="card">
+            <h4 id="title-menu"><%= menu.nombre %></h4>
+            <div class="container-picture">
             <a href="/detail/<%= menu.id %>"><img src="<%=menu.image %>"/></a>
-          <p class="ps-text-grey">
-            <%= menu.descrpcion%> 
-          </p>
-          <p>precio: <%=menu.precio%></p>
+            </div>
+            <p class="ps-text-grey"><%= menu.descrpcion%> </p>
+            <p>precio: <%=menu.precio%></p>
+          </article>
         <%}%>
-        </div>
-      </div>
+        </article>
+      </section>
       <!-- Footer -->
       <%-include('./partials/footer')%>
-    </div>
   </body>
 </html>
