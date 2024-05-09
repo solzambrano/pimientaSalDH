@@ -8,7 +8,7 @@ h4{
 p{
     font-size: 18px;
 }
-h1{
+h1,#text-y-mas{
     text-align: center;
 }
 img{
@@ -39,9 +39,8 @@ img{
 @media (min-width: 1024px) {
     .card{
         width: 45vw;
-    align-items: flex-start;
-    justify-content: space-around; 
-    margin:20px;
+        align-items: flex-start;
+        margin:20px;
     }
     #menu{
         margin-top: 30px;

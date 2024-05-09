@@ -7,9 +7,6 @@ html{
 img{
     width: 100%;
 }
-.menu-nav{
-    display: none;
-}
 
 @media (min-width: 780px) {
 .text-about{

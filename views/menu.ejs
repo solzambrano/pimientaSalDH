@@ -2,17 +2,13 @@
 <html>
   <head>
     <title>Pimienta & sal</title>
-     <link rel="stylesheet" href="/css/index.css" />
+     <link rel="stylesheet" href="/css/menu.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <!-- Navbar (sit on top) -->
     <%- include('./partials/nav')%>
-   
-
-    <!-- Header -->
-    <%- include('./partials/header')%>
 
     <!-- Page content -->
       <!-- Menu Section -->
@@ -23,16 +19,14 @@
           <article class="card">
             <h4 id="title-menu"><%= menu.nombre %></h4>
             <div class="container-picture">
-              <img src="<%=menu.image %>"/>
+            <a href="/menu/detail/<%= menu.id %>"><img src="<%=menu.image %>"/></a>
             </div>
             <p class="ps-text-grey"><%= menu.descrpcion%> </p>
             <p>precio: <%=menu.precio%></p>
           </article>
-
         <%}%>
         </article>
       </section>
-      <h3 id="text-y-mas"><a href="./menu">.... y MÁS </a></h3>
       <!-- Footer -->
       <%-include('./partials/footer')%>
   </body>
