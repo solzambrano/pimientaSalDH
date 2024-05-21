@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sal y Pimienta</title>
+</head>
+<body>
+        <!-- Navbar (sit on top) -->
+    <%- include('./partials/nav')%>
+    <div>
+         <article class="card">
+            <h4 id="title-menu"><%= product.namefood %></h4>
+            <div class="container-picture">
+              <img src="<%=product.image %>"/>
+            </div>
+            <p class="ps-text-grey"><%= product.description %> </p>
+            <p>precio: <%=product.price %></p>
+          </article>
+    </div>
+</body>
+</html>

@@ -8,6 +8,8 @@ router.get('/',indexController.menu)
 router.get('/detail/:id',indexController.detail)
 router.get('/create',indexController.create)
 
+router.post('/list',indexController.setProduct)
+
 
 
 module.exports=router

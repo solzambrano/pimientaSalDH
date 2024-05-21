@@ -10,6 +10,15 @@ const menuController={
     },
     create:(req,res)=>{
         res.render('create')
+    },
+    setProduct:(req,res)=>{
+        let product={
+            namefood:req.body.namefood,
+            price:req.body.price,
+            description:req.body.description,
+            image:req.body.image,
+        }
+        res.render('list',{product:product})
     }
 }
 

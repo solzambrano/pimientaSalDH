@@ -11,15 +11,15 @@
     <%- include('./partials/nav')%>
    
     <!-- Page content -->
-    <form>
+    <form method="POST" action="/menu/list">
           <label for="nombrePlato"><span>Nombre del plato</span>
-                <input name="nombrePlato" id="nombrePlato">
+                <input name="namefood" id="nombrePlato">
             </label>
             <label for="precio"><span>Precio</span>
-                <input name="precio" id="precio">
+                <input name="price" id="precio">
             </label>
             <label for="descripcion"><span>Descripcion</span>
-                <input name="descripcion" id="descripcion" type="descripcion">
+                <input name="description" id="descripcion" type="descripcion">
             </label>
             <label for="date"><span>Imagen</span>
                 <input name="date" id="date" type="date">
