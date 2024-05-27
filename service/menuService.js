@@ -9,16 +9,23 @@ const menuService={
         },
     getFood:function(id){
         console.log(this.menuJson)
-        return detailImage=this.menuJson.find(element=>element.id==id)
+        return detailImage=this.menuJson.find(element=>element.nombre==id)
     },
-    createProduct:function(data){
+    getMaxId :function() {
+        return Math.max(...this.menuJson.map(item => item.id), 0);
+    },
+    createProduct:function(req){
         let product={
-            namefood:req.body.namefood,
-            price:req.body.price,
-            description:req.body.description,
-            image:req.body.image,
+            id:menuService.getMaxId()+1,
+            nombre:req.namefood,
+            precio:req.price,
+            descripcion:req.description,
+            image:req.image,
         }
-        return product
+        fs.appendFileSync(this.menuJson,product)
+        this.menuJson.push(product)
+        console.log(this.menuJson)
+
     },
 }
 

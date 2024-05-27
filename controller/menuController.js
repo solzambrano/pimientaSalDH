@@ -11,8 +11,8 @@ const menuController={
         res.render('create')
     },
     setProduct:(req,res)=>{
-      
-        res.render('list',{product:menu.createProduct(req)})
+        menu.createProduct(req.body)
+        res.send(req.body)
     },
     modify:(req,res)=>{
         res.render('edit',{findFood:menu.getFood(req.params.id)})

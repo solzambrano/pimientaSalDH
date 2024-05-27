@@ -11,7 +11,7 @@
     <%- include('./partials/nav')%>
    
     <!-- Page content -->
-    <form method="POST" action="/menu/detail/<%=findFood.id %>/edit?_method='PUT">
+
           <label for="nombrePlato"><span>Nombre del plato</span>
                 <input name="namefood" id="nombrePlato" value="<%=findFood.nombre%>">
             </label>
@@ -26,6 +26,5 @@
             </label >
             <button>enviar</button>
 
-    </form>
   </body>
 </html>
