@@ -19,14 +19,14 @@
       <section class="" id="menu">
           <h1 class="">Nuestro Menu</h1>
         <article class="menuContent">
-          <% for (let menu of menuComida) {%>
+          <% for (let item of menuCasa) {%>
           <article class="card">
-            <h4 id="title-menu"><%= menu.nombre %></h4>
+            <h4 id="title-menu"><%= item.nombre %></h4>
             <div class="container-picture">
-              <img src="<%=menu.image %>"/>
+              <img src="<%=item.image %>"/>
             </div>
-            <p class="ps-text-grey"><%= menu.descrpcion%> </p>
-            <p>precio: <%=menu.precio%></p>
+            <p class="ps-text-grey"><%= item.descrpcion%> </p>
+            <p>precio: <%=item.precio%></p>
           </article>
 
         <%}%>

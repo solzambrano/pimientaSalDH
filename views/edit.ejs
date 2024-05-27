@@ -1,0 +1,31 @@
+
+<html>
+  <head>
+    <title>Pimienta & sal</title>
+    <link rel="stylesheet" href="/css/detail.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <%- include('./partials/nav')%>
+   
+    <!-- Page content -->
+    <form method="POST" action="/menu/detail/<%=findFood.id %>/edit?_method='PUT">
+          <label for="nombrePlato"><span>Nombre del plato</span>
+                <input name="namefood" id="nombrePlato" value="<%=findFood.nombre%>">
+            </label>
+            <label for="precio"><span>Precio</span>
+                <input name="price" id="precio"  value="<%=findFood.precio%>">
+            </label>
+            <label for="descripcion"><span>Descripcion</span>
+                <input name="description" id="descripcion" type="descripcion"  value="<%=findFood.descripcion%>">
+            </label>
+            <label for="image"><span>Imagen</span>
+                <input name="image" id="image" type="image"  value="<%=findFood.image%>">
+            </label >
+            <button>enviar</button>
+
+    </form>
+  </body>
+</html>

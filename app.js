@@ -4,6 +4,8 @@ const index=require('./routes/indexRoutes');
 const about=require('./routes/about');
 const menu=require('./routes/menu')
 
+const methodO=require('method-override')
+app.use(methodO('_method'))
 
 
 
