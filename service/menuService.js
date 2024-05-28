@@ -1,6 +1,7 @@
 const fs=require('fs')
 const jsonData=require('./data.json')
-
+const path = require('path');
+const productsPath = path.join(__dirname, "../service/data.json");
 
 const menuService={
     menuJson:jsonData,
@@ -17,14 +18,18 @@ const menuService={
     createProduct:function(req){
         let product={
             id:menuService.getMaxId()+1,
-            nombre:req.namefood,
-            precio:req.price,
-            descripcion:req.description,
-            image:req.image,
+            image: req.file ? `/images/${req.file.filename}` : "",
+            descripcion:req.body.description,
+            nombre:req.body.namefood,
+            precio:req.body.price,
         }
-        fs.appendFileSync(this.menuJson,product)
-        this.menuJson.push(product)
-        console.log(this.menuJson)
+           const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
+            products.push(product);
+
+            fs.writeFileSync(productsPath, JSON.stringify(products, null, 2)); // Escribe el archivo completo
+
+            console.log(products);
+            return products
 
     },
 }
