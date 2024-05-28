@@ -2,6 +2,7 @@ const fs=require('fs')
 const jsonData=require('./data.json')
 const path = require('path');
 const productsPath = path.join(__dirname, "../service/data.json");
+const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 
 const menuService={
     menuJson:jsonData,
@@ -21,14 +22,11 @@ const menuService={
             image: req.file ? `/images/${req.file.filename}` : "",
             descripcion:req.body.description,
             nombre:req.body.namefood,
-            precio:req.body.price,
+            precio:'U$S'+  req.body.price,
         }
-           const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
             products.push(product);
 
-            fs.writeFileSync(productsPath, JSON.stringify(products, null, 2)); // Escribe el archivo completo
-
-            console.log(products);
+            fs.writeFileSync(productsPath, JSON.stringify(products, null, 2));
             return products
 
     },

@@ -1,0 +1,31 @@
+form{
+    display: grid;
+  justify-content: center;
+  align-items: center;
+
+}
+label{
+    margin:10px;
+    display: contents;
+}
+label span{
+margin:10px 0px;
+}
+#image::file-selector-button {
+  color: white;
+  background-color: #D3BBA5;
+  color: #141212;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0px;
+}
+form button{
+     color: white;
+  background-color: #D3BBA5;
+  color: #141212;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
