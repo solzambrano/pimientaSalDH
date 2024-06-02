@@ -5,32 +5,40 @@ const productsPath = path.join(__dirname, "../service/data.json");
 const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 
 const menuService={
-    menuJson:jsonData,
-    getMenu: function() {
-        return this.menuJson
-        },
-    getFood:function(id){
-        console.log(this.menuJson)
-        return detailImage=this.menuJson.find(element=>element.nombre==id)
-    },
-    getMaxId :function() {
-        return Math.max(...this.menuJson.map(item => item.id), 0);
-    },
-    createProduct:function(req){
+    getMenu: () =>products,
+    getFood:(id)=>detailImage=products.find(element=>element.nombre==id),
+    getMaxId :()=>Math.max(...products.map(item => item.id), 0),
+    createProduct:(req)=>{
         let product={
             id:menuService.getMaxId()+1,
             image: req.file ? `/images/${req.file.filename}` : "",
-            descripcion:req.body.description,
-            nombre:req.body.namefood,
-            precio:'U$S'+  req.body.price,
-        }
+            descripcion:req.body.descripcion,
+            nombre:req.body.nombre,
+            precio:'U$S'+  req.body.precio,
+        }+
             products.push(product);
 
             fs.writeFileSync(productsPath, JSON.stringify(products, null, 2));
             return products
-
     },
+    updateProduct:(param)=>{
+      products.find(element=>{
+       if(element.nombre == param.params.id){
+            for(item in element){
+                if(element[item]!==param.body[item] && param.body[item]!=undefined){
+                    console.log(element[item], param.body[item])
+                    element[item] =param.body[item]
+                }
+       }
+       return element
+       }    
+
+       })
+       fs.writeFileSync(productsPath, JSON.stringify(products, null, 2));
+       return products
+    }
 }
+
 
 
 module.exports=menuService

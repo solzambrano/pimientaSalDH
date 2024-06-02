@@ -15,7 +15,10 @@ const menuController={
     },
     modify:(req,res)=>{
         res.render('edit',{findFood:menu.getFood(req.params.id)})
-    }
+    },
+    update:(req,res)=>{
+         res.render('menu',{menu:menu.updateProduct(req)})
+        }
 }
 
 module.exports=menuController
