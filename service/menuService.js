@@ -15,24 +15,29 @@ const menuService={
             descripcion:req.body.descripcion,
             nombre:req.body.nombre,
             precio:'U$S'+  req.body.precio,
-        }+
+        }
             products.push(product);
 
             fs.writeFileSync(productsPath, JSON.stringify(products, null, 2));
             return products
     },
     updateProduct:(param)=>{
+        console.log(param.file);
+        console.log(param.body);
       products.find(element=>{
-       if(element.nombre == param.params.id){
+        console.log(element);
+         if(element.nombre == param.params.id){
             for(item in element){
                 if(element[item]!==param.body[item] && param.body[item]!=undefined){
-                    console.log(element[item], param.body[item])
                     element[item] =param.body[item]
                 }
+                param.file?.filename !== undefined? 
+                element.image =`/images/${param.file?.filename}`
+                :element.image=element.image
+
        }
        return element
-       }    
-
+          }    
        })
        fs.writeFileSync(productsPath, JSON.stringify(products, null, 2));
        return products

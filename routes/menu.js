@@ -10,7 +10,7 @@ router.post('/create', multerMidd.uploadFile.single("image"),indexController.set
 
 router.get('/detail/:id',indexController.detail) //detalle de producto
 
-router.get('/detail/:id/edit',indexController.modify)
+router.get('/detail/:id/edit',indexController.edit)
 router.put('/detail/:id/edit', multerMidd.uploadFile.single("image"),indexController.update)
 
 

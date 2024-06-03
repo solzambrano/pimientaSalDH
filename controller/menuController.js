@@ -13,7 +13,7 @@ const menuController={
     setProduct:(req,res)=>{
         res.render('menu', {menu:menu.createProduct(req)})
     },
-    modify:(req,res)=>{
+    edit:(req,res)=>{
         res.render('edit',{findFood:menu.getFood(req.params.id)})
     },
     update:(req,res)=>{

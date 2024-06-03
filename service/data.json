@@ -25,13 +25,20 @@
     "image": "/images/esparragos.png",
     "descripcion": "Espárragos blancos con vinagreta de verduras y jamón ibérico",
     "nombre": "Esparragos blancos",
-    "precio": "U$S  37.50"
+    "precio": "U$S  37.00"
   },
   {
     "id": 5,
-    "image": "/images/1716864439816_img_.jpg",
+    "image": "/images/1717426896510_img_.jpg",
     "descripcion": "hamburguesa clasica con jamon y queso parmesano, salteado con cebollas en vino tinto",
     "nombre": "hamburguesa",
     "precio": "U$S 40"
+  },
+  {
+    "id": 6,
+    "image": "/images/1717426909229_img_.jpg",
+    "descripcion": "tarta de jamon y queso a la valenciana, acompañada de rucula fresca",
+    "nombre": "tarta de jamon y queso",
+    "precio": "U$SU$S 250"
   }
 ]
