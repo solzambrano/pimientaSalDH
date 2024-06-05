@@ -13,6 +13,7 @@ router.get('/detail/:id',indexController.detail) //detalle de producto
 router.get('/detail/:id/edit',indexController.edit)
 router.put('/detail/:id/edit', multerMidd.uploadFile.single("image"),indexController.update)
 
+router.delete('/detail/:id/delete',indexController.delete)
 
 
 module.exports=router

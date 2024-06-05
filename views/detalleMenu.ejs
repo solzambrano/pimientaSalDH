@@ -30,12 +30,12 @@
           />
         </article>
           <article class="button">
-            <button>Eliminar</button>
+            <form method="POST" enctype="multipart/form-data" action="/menu/detail/<%=detailImage.nombre %>/delete?_method=DELETE">
+              <button>Eliminar</button>
+            </form>
             <a href="/menu/detail/<%=detailImage.nombre %>/edit">
-              <button>
-                Modificar
-              </button>
-              </a>
+              <button>Modificar</button>
+            </a>
           </article>
       </section>
 

@@ -6,7 +6,7 @@ const storage = multer.diskStorage({
         cb(null, path.join(__dirname, '../public/images')); // Ajusta la ruta según tu estructura de proyecto
     },
     filename: function(req, file, cb) {
-        cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);
+        cb(null, file.originalname);
     }
 });
 

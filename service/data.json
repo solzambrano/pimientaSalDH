@@ -29,16 +29,23 @@
   },
   {
     "id": 5,
-    "image": "/images/1717426896510_img_.jpg",
-    "descripcion": "hamburguesa clasica con jamon y queso parmesano, salteado con cebollas en vino tinto",
-    "nombre": "hamburguesa",
-    "precio": "U$S 40"
+    "image": "/images/canelonesjpg.webp",
+    "descripcion": "canelones de pollo relleno con queso",
+    "nombre": "canelones",
+    "precio": "U$S 25"
   },
   {
     "id": 6,
-    "image": "/images/1717426909229_img_.jpg",
-    "descripcion": "tarta de jamon y queso a la valenciana, acompañada de rucula fresca",
-    "nombre": "tarta de jamon y queso",
-    "precio": "U$SU$S 250"
+    "image": "/images/hamburguesa.jpg",
+    "descripcion": "hamburguesa clasica de jamon y queso con lechuga y tomate",
+    "nombre": "hamburguesa clasica",
+    "precio": "U$S30"
+  },
+  {
+    "id": 7,
+    "image": "/images/paella de mariscos.jpg",
+    "descripcion": "paella de ostras y langostinos",
+    "nombre": "paella de mariscos",
+    "precio": "U$S 25"
   }
 ]
