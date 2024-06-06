@@ -37,15 +37,8 @@
   {
     "id": 6,
     "image": "/images/hamburguesa.jpg",
-    "descripcion": "hamburguesa clasica de jamon y queso con lechuga y tomate",
+    "descripcion": "hamburguesa clasica de jamon con queso con lechuga y tomate",
     "nombre": "hamburguesa clasica",
-    "precio": "U$S30"
-  },
-  {
-    "id": 7,
-    "image": "/images/paella de mariscos.jpg",
-    "descripcion": "paella de ostras y langostinos",
-    "nombre": "paella de mariscos",
-    "precio": "U$S 25"
+    "precio": "U$S 30"
   }
 ]

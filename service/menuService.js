@@ -38,14 +38,11 @@ const menuService={
             if(param.file?.originalname !== undefined && item=='image'){ //voy a cambiar la imagen
                  imagePath = path.join(__dirname, '../public/images', path.basename(elementFind.image));
                 elementFind.image =`/images/${param.file?.originalname}` //sobreescribe
-            }else{
-                elementFind.image=elementFind.image
-                }      
+            }    
        } 
         if( fs.existsSync(imagePath)) {
-                     fs.unlinkSync(imagePath)
-                    }
-                   
+            fs.unlinkSync(imagePath)
+        }
        fs.writeFileSync(productsPath, JSON.stringify(products, null, 2));
        return products
     },
