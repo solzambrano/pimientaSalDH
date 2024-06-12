@@ -21,6 +21,9 @@ app.listen(port,()=>{
 app.use('/',index)
 app.use('/',about)
 app.use('/menu',menu)
+app.use(((req,res,next)=>{
+    res.status(404).render('not-found')
+}))
 
 
 
