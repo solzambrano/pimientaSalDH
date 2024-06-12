@@ -23,6 +23,7 @@ const menuService={
             nombre:req.body.nombre,
             precio:'U$S'+  req.body.precio,
         }
+        console.log('producto',product);
             products.push(product);
             fs.writeFileSync(productsPath, JSON.stringify(products, null, 2));
             return products

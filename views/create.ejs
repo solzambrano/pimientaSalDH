@@ -13,16 +13,34 @@
     <!-- Page content -->
     <form method="POST" action="/menu/create" enctype="multipart/form-data">
           <label for="nombrePlato"><span>Nombre del plato: </span>
-                <input name="nombre" id="nombrePlato" required>
+                <input name="nombre" id="nombrePlato" required 
+                value="<%= locals.oldData ? oldData.nombre : '' %>"
+                >
+                <% if (locals.errors && errors.nombre) { %>
+                  <span class="danger"><%=errors.nombre.msg %></span>
+                  <%}%>            
             </label>
             <label for="precio"><span>Precio: </span>
-                <input name="precio" id="precio">
+                <input name="precio" id="precio" required 
+                value="<%= locals.oldData ? oldData.precio : '' %>"
+                >
+                <% if (locals.errors && errors.precio) { %>
+                  <span class="danger"><%=errors.precio.msg %></span>
+                  <%}%>    
             </label>
             <label for="descripcion"><span>Descripcion: </span>
-                <textarea name="descripcion" id="descripcion" type="descripcion"></textarea>
+                <textarea name="descripcion" id="descripcion" 
+                type="descripcion"
+                ><%= locals.oldData ? oldData.descripcion : '' %></textarea>
+            <% if (locals.errors && errors.descripcion) { %>
+                  <span class="danger"><%=errors.descripcion.msg %></span>
+                  <%}%>    
             </label>
             <label for="image"><span>Imagen: </span>
                 <input name="image" id="image" type="file">
+                <% if (locals.errors && errors.image) { %>
+                  <span class="danger"><%=errors.image.msg %></span>
+                  <%}%>    
             </label >     
             <button type="submit">enviar</button>
     </form>

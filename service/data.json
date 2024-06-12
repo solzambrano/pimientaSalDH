@@ -40,5 +40,12 @@
     "descripcion": "hamburguesa clasica de jamon con queso con lechuga y tomate",
     "nombre": "hamburguesa clasica",
     "precio": "U$S 30"
+  },
+  {
+    "id": 7,
+    "image": "/images/ratatouille.jpg",
+    "descripcion": "ratatouille de verduras",
+    "nombre": "ratatouille",
+    "precio": "U$S 25"
   }
 ]
