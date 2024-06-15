@@ -1,6 +1,6 @@
 const express= require('express');
 const router=express.Router();
-const multerMidd = require("../middleware/middlewareMenu");
+const multerMidd = require("../middleware/middlewareMulter");
 const validationData=require("../middleware/middlewareValidation")
 const validationErrors = require("../middleware/middlewareErrors")
 const indexController= require('../controller/menuController')

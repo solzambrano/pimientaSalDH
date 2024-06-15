@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pimienta & sal</title>
+     <link rel="stylesheet" href="/css/index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <%- include('./partials/nav')%>
+   <form method="POST" action="/login" >
+          <label for="email"><span>Email:  </span>
+                <input name="email" id="email" required type="email"
+                >
+                <!-- <% if (locals.errors && errors.email) { %>
+                  <span class="danger"><%=errors.email.msg %></span>
+                  <%}%>             -->
+            </label>
+            <label for="password"><span>Password: </span>
+                <input name="password" id="password" type="password" 
+                required 
+                
+                >
+                <!-- <% if (locals.errors && errors.password) { %>
+                  <span class="danger"><%=errors.password.msg %></span>
+                  <%}%>     -->
+            </label>
+   
+            <button type="submit">enviar</button>
+    </form>
+</body>
+</html>

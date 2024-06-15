@@ -3,12 +3,14 @@ const app=express();
 const index=require('./routes/indexRoutes');
 const about=require('./routes/about');
 const menu=require('./routes/menu')
+const loginUser= require ('./routes/users')
 
 const methodO=require('method-override')
 app.use(methodO('_method'))
 
 
 const port=process.env.PORT || 3000
+//middleware global
 app.use(express.static('./public'))
 
 app.set('view engine','ejs')
@@ -21,6 +23,9 @@ app.listen(port,()=>{
 app.use('/',index)
 app.use('/',about)
 app.use('/menu',menu)
+
+app.use('/login',loginUser)
+
 app.use(((req,res,next)=>{
     res.status(404).render('not-found')
 }))
