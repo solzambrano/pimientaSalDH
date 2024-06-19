@@ -6,6 +6,7 @@ const userController={
     },
     create:(req,res)=>{
         console.log('controller',req.body);
+        req.session.user=req.user
         user.create(req.body)
         res.send('hola admin  '+req.user)
     }
