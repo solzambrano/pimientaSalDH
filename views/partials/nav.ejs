@@ -9,17 +9,16 @@
         <a href="/" class="">Pimienta & Sal</a>
 
         <div class="menu">
-
           <% if (typeof userData !== 'undefined' && userData) { %>
-            <a href="/menu/create" class="crear-nav">Crear</a>
             <div>
-             <i id='user' class="fa-regular fa-user"></i>
-             <div>
-
-            <p> <%= userData %></p>
-            <p>Cerrar sesion</p>
-             </div>
+              <i id='user' class="fa-regular fa-user"></i>
+              <div class='user-menu' id="user-menu">
+                 <p class="user-name"><%= userData %></p>
+                <p class="logout">Cerrar sesión</p>
+              </div>
             </div>
+            <a href="/menu/create" class="crear-nav">Crear</a>
+
         <% } else { %>
             <a href="/login" class="crear-nav">Login</a>
         <% } %>

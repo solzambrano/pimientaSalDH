@@ -11,7 +11,30 @@ a{
     text-decoration: none;
     color:black
 }
+.user-container {
+    position: relative;
+}
+.menu{
+  display: flex;
+}
+.user-menu {
+    display: none;
+    position: absolute;
+      background-color: rgb(238, 205, 235); /* Temporalmente, para debug */
+  
+}
 
+.user-menu p {
+    padding: 12px 16px;
+    margin: 0;
+    cursor: pointer;
+}
+#user {
+    cursor: pointer;
+}
+#user-menu p:hover {
+  background-color: #f1f1f1;
+}
 .menu a {
   margin-left: 20px; /* Agrega un espacio entre los elementos */
 }

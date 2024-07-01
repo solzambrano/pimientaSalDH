@@ -11,7 +11,8 @@
     <%- include('./partials/nav')%>
    <form method="POST" action="/login" >
           <label for="email"><p>Email:</p>
-                <input name="email" id="email" required type="email">
+                <input name="email" id="email" required type="email"
+                 value="<%= locals.oldData ? oldData.email : '' %>">
                  <% if (locals.errors && errors.email) { %>
                   <p class="danger"><%=errors.email.msg %></p>
                   <%}%>

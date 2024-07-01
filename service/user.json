@@ -15,15 +15,15 @@
   },
   {
     "id": 3,
-    "email": "vim@gmail.com",
-    "nombre":"Vim",
+    "email": "cris@gmail.com",
+    "nombre":"Cris",
     "password": "1234"
  
   },
   {
     "id": 4,
-    "email": "Tim@gmail.com",
-    "nombre":"Tim",
+    "email": "Leon@gmail.com",
+    "nombre":"Leon",
     "password": "1234"
   
   }
