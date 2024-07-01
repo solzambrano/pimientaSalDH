@@ -5,9 +5,17 @@ const validationUser =(req,res,next)=>{
 let users=userPath.find(element=>element.email == req.body.email)
 if (users !=undefined){
     req.user=users.nombre
-    next()
-}else 
-    res.status(401).send('Unauthorized');
+}else{
+     return res.render('login', {
+				errors: {
+					email: {
+						msg: 'Este email no está registrado'
+					}
+				},
+				oldData: req.body
+			});
+}
+   next()
 }
 
 module.exports=validationUser

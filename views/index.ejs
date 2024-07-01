@@ -8,8 +8,8 @@
   </head>
   <body>
     <!-- Navbar (sit on top) -->
-    <%- include('./partials/nav')%>
-   
+    <%- include('./partials/nav', { userData: locals.userData })%>
+   <%console.log('llegue a index',userData)%>
 
     <!-- Header -->
     <%- include('./partials/header')%>

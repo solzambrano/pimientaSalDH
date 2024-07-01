@@ -6,9 +6,6 @@ const userService={
     getUsers: () =>{
         return JSON.parse(fs.readFileSync(userPath, 'utf-8'));
         },
-    create:(req)=>{
-        return req.body
-    }
 
 }
 

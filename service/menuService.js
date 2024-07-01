@@ -42,7 +42,7 @@ const menuService={
             }    
        } 
         if( fs.existsSync(imagePath)) {
-            fs.unlinkSync(imagePath)
+            fs.unlinkSync(imagePath) //lo elimina
         }
        fs.writeFileSync(productsPath, JSON.stringify(products, null, 2));
        return products
@@ -58,7 +58,9 @@ const menuService={
             }
             return element.nombre != req.params.id
             })
-            if(encontrado)fs.unlinkSync(imagePath);
+            if(encontrado){
+                fs.unlinkSync(imagePath);
+            }
          fs.writeFileSync(productsPath, JSON.stringify(newJson, null, 2));
     }
 }

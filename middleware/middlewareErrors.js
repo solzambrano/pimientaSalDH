@@ -1,10 +1,10 @@
 const { validationResult } = require('express-validator');
 
-const errorHandler = (req, res, next) => {
+const errorHandler = (viewToRender)=>(req, res, next) => {
     const errors = validationResult(req);
-   console.log('middleware',req.body)
     if (!errors.isEmpty()) {
-        return res.render('create',({ errors: errors.mapped() ,
+        return res.render(viewToRender,
+        ({ errors: errors.mapped() ,
         oldData:req.body}));
     }
     next();

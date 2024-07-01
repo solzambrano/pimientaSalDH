@@ -1,17 +1,32 @@
    <head>
     <title>Pimienta & sal</title>
       <link rel="stylesheet" href="/css/nav.css" />
-
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
  <nav id="navbar">     
         <a href="/" class="">Pimienta & Sal</a>
+
         <div class="menu">
-          <a href="/login" class="">Login</a>
+
+          <% if (typeof userData !== 'undefined' && userData) { %>
+            <a href="/menu/create" class="crear-nav">Crear</a>
+            <div>
+             <i id='user' class="fa-regular fa-user"></i>
+             <div>
+
+            <p> <%= userData %></p>
+            <p>Cerrar sesion</p>
+             </div>
+            </div>
+        <% } else { %>
+            <a href="/login" class="crear-nav">Login</a>
+        <% } %>
           <a href="/about" class="">About</a>
           <a href="/menu" class="menu-nav">Menu</a>
-          <a href="/menu/create" class="crear-nav">Crear</a>
+        
 
         </div>
     </nav>
+    <script src="scripts/login.js"></script>

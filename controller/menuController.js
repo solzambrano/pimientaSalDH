@@ -1,11 +1,12 @@
 const menu=require('../service/menuService')
+
 const menuController={
     detail:(req,res)=>{
         res.render('detalleMenu',{detailImage:menu.getFood(req.params.id)})
     },
     menu:(req,res)=>{
-       res.render('menu',{menu:menu.getMenu()})
-
+       res.render('menu',{
+        menu:menu.getMenu()})
     },
     create:(req,res)=>{
         res.render('create')

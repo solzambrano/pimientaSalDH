@@ -10,7 +10,7 @@ router.get('/',indexController.menu)
 router.get('/create',indexController.create)
 router.post('/create', multerMidd.uploadFile.single("image"),
 validationData,
-validationErrors,
+validationErrors('create'),
 indexController.setProduct)
 
 router.get('/detail/:id',indexController.detail) //detalle de producto
