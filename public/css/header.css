@@ -9,6 +9,9 @@
   color:black;
     position: absolute;
 }
+#home{
+  margin-top: 110px;
+}
 
 /*media query*/
 @media (min-width: 768px) {

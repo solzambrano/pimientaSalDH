@@ -9,11 +9,12 @@
         <a href="/" class="">Pimienta & Sal</a>
 
         <div class="menu">
-          <% if (typeof userData !== 'undefined' && userData) { %>
+          <% if (locals.userLogged && locals.isLogged) { %>
+          <%console.log('llegue al nav',locals.userLogged)%>
             <div>
               <i id='user' class="fa-regular fa-user"></i>
               <div class='user-menu' id="user-menu">
-                 <p class="user-name"><%= userData %></p>
+                 <p class="user-name"><%= locals.userLogged %></p>
                <a class="nav-link" href="/login/logout"> <p class="logout">Cerrar sesión</p></a>
               </div>
             </div>
