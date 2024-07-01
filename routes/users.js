@@ -8,5 +8,5 @@ const userController=require('../controller/userController')
 
 router.get('/',userController.form)
 router.post('/',validationUsers,validationErrors('login'),validationDataUser,userController.create)
-
+router.get('/logout',userController.logout)
 module.exports=router

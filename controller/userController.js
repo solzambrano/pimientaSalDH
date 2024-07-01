@@ -8,6 +8,10 @@ const userController={
         req.session.nombre=req.user
         res.redirect('/')
 
+       },
+       logout:(req,res)=>{
+        req.session.destroy();
+        res.redirect('/')
        }
 }
 module.exports=userController
