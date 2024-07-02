@@ -3,6 +3,7 @@
   height: 50%;
   opacity: 0.5;
   position: relative;
+  margin: 40px;
 }
 .tittleHeader{
   font-size: 25px;
@@ -23,6 +24,9 @@
   .tittle{
     display: flex;
     justify-content: space-between;
+  }
+  .imageHeader{
+     width: 45%;
   }
 }
 @media (min-width: 1024px) {

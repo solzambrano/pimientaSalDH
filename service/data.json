@@ -47,5 +47,12 @@
     "descripcion": "ratatouille de verduras",
     "nombre": "ratatouille",
     "precio": "U$S 25"
+  },
+  {
+    "id": 8,
+    "image": "/images/burrito.jpg",
+    "descripcion": "comidita rica :D",
+    "nombre": "burrito",
+    "precio": "U$S 15"
   }
 ]

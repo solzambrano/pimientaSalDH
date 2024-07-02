@@ -25,9 +25,10 @@ a{
 }
 
 .user-menu p {
-    padding: 12px 16px;
+    padding:4px 16px;
     margin: 0;
     cursor: pointer;
+    font-size: 15px;
 }
 #user {
     cursor: pointer;
