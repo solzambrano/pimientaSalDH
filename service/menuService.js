@@ -14,14 +14,18 @@ const menuService={
         let products=menuService.getMenu()
        return  Math.max(...products.map(item => item.id), 0)
     },
+    capitalizeFirstLetter:(name)=>{
+        return name.charAt(0).toUpperCase()+ name.slice(1)
+
+    },
     createProduct:(req)=>{
         let products=menuService.getMenu();
         product={
             id:menuService.getMaxId()+1,
             image: req.file ? `/images/${req.file.originalname}` : "",
-            descripcion:req.body.descripcion,
+            descripcion:menuService.capitalizeFirstLetter(req.body.descripcion),
             nombre:req.body.nombre,
-            precio:'U$S'+  req.body.precio,
+            precio:'U$S '+  req.body.precio,
         }
         console.log('producto',product);
             products.push(product);

@@ -31,28 +31,28 @@
     "id": 5,
     "image": "/images/canelonesjpg.webp",
     "descripcion": "canelones de pollo relleno con queso",
-    "nombre": "canelones",
+    "nombre": "Canelones",
     "precio": "U$S 25"
   },
   {
     "id": 6,
     "image": "/images/hamburguesa.jpg",
     "descripcion": "hamburguesa clasica de jamon con queso con lechuga y tomate",
-    "nombre": "hamburguesa clasica",
+    "nombre": "Hamburguesa clasica",
     "precio": "U$S 30"
   },
   {
     "id": 7,
     "image": "/images/ratatouille.jpg",
     "descripcion": "ratatouille de verduras",
-    "nombre": "ratatouille",
+    "nombre": "Ratatouille",
     "precio": "U$S 25"
   },
   {
     "id": 8,
     "image": "/images/burrito.jpg",
     "descripcion": "comidita rica :D",
-    "nombre": "burrito",
+    "nombre": "Burrito",
     "precio": "U$S 15"
   }
 ]
