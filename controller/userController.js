@@ -4,8 +4,9 @@ const userController={
     form:(req,res)=>{
         res.render('login')
     },
-    create:(req,res)=>{
-        req.session.nombre=req.user
+    login:(req,res)=>{
+        req.session.nombre=req.user;
+         res.cookie('user',req.user,{ maxAge:1000*2})
         res.redirect('/')
 
        },

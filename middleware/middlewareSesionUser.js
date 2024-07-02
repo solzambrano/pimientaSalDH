@@ -8,6 +8,16 @@ if(req.session && req.session.nombre){
 res.locals.isLogged=true
 res.locals.userLogged=req.session.nombre
 }
+if(req.body.remember){
+let nameUser=req.cookies.user;
+
+    console.log(nameUser);
+if(nameUser){
+    req.session.nombre=nameUser;
+    res.locals.userLogged=nameUser
+}
+}
+
 next()
 }
 
